@@ -1,0 +1,22 @@
+{
+  "name": "@architect/proxy-plugin-html-urls",
+  "version": "1.0.1",
+  "description": "adds /staging and /production to html elements",
+  "main": "dist/index.js",
+  "scripts": {
+    "lint": "eslint index.js --fix",
+    "build": "ncc build index.js --minify -o dist",
+    "test": "tape test.js | tap-spec"
+  },
+  "keywords": [],
+  "author": "Brian LeRoux <b@brian.io>",
+  "license": "Apache-2.0",
+  "dependencies": {},
+  "devDependencies": {
+    "@zeit/ncc": "^0.14.0",
+    "cheerio": "^1.0.0-rc.2",
+    "eslint": "^5.13.0",
+    "tap-spec": "^5.0.0",
+    "tape": "^4.9.2"
+  }
+}
