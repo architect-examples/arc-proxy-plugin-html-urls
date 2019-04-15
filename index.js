@@ -34,8 +34,11 @@ module.exports = function html(Key, {headers, body}) {
     // collect the elements
     $(element).each(function() {
       // rewrite the element attribute
-      let url = prefix + $(this).attr(attribute)
-      $(this).attr(attribute, url)
+      let val =  $(this).attr(attribute)
+      let url = prefix + val
+      if (!val.startsWith('http')) {
+        $(this).attr(attribute, url)
+      }
     })
   })
   return {

@@ -12,6 +12,7 @@ test('returns {body, headers}', t=> {
   let src = `
   <a href=/foo>foo</a>
   <br>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <img src=/otter-fren.png>
   <form action=/login method=post><button></form>
   <script src=/awesome.mjs type=module></script>
