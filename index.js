@@ -36,7 +36,7 @@ module.exports = function html(Key, {headers, body}) {
       // rewrite the element attribute
       let val =  $(this).attr(attribute)
       let url = prefix + val
-      if (!val.startsWith('http')) {
+      if (val && !val.startsWith('http')) {
         $(this).attr(attribute, url)
       }
     })
